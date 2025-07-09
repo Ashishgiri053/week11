@@ -10,7 +10,7 @@ on:
 
 
 
-  # This job deploys to the staging environment after a merge to prod
+  # This job deploys to the staging environment after  merge to prod
   terraform-apply-to-staging:
     name: 'Terraform Apply to STAGING'
     if: github.event_name == 'push'
