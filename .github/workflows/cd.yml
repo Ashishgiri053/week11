@@ -31,10 +31,9 @@ jobs:
 
     - name: Terraform Plan
       run: terraform plan
-      env:
-        # Pass the AWS credentials from GitHub secrets to Terraform
-        AWS_ACCESS_KEY_ID: ${{ASIAYWE3BNF7FBUR3OTD}}
-        AWS_SECRET_ACCESS_KEY: ${{woV6jrvgJ3cyMQknKfXw1OzEf5wwUQ4qLOhCILJ7}}
+     env:
+  AWS_ACCESS_KEY_ID: ${{ASIAYWE3BNF7FBUR3OTD}}
+  AWS_SECRET_ACCESS_KEY: ${{woV6jrvgJ3cyMQknKfXw1OzEf5wwUQ4qLOhCILJ7}}
 
   # This job deploys to the staging environment after a merge to prod
   terraform-apply-to-staging:
@@ -55,9 +54,9 @@ jobs:
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
-      env:
-        AWS_ACCESS_KEY_ID: ${{ASIAYWE3BNF7FBUR3OTD}}
-        AWS_SECRET_ACCESS_KEY: ${{woV6jrvgJ3cyMQknKfXw1OzEf5wwUQ4qLOhCILJ7}}
+     env:
+  AWS_ACCESS_KEY_ID: ${{ASIAYWE3BNF7FBUR3OTD}}
+  AWS_SECRET_ACCESS_KEY: ${{woV6jrvgJ3cyMQknKfXw1OzEf5wwUQ4qLOhCILJ7}}
 
   # This job deploys to the prod environment after a merge to prod
   terraform-apply-to-prod:
@@ -80,5 +79,5 @@ jobs:
     - name: Terraform Apply
       run: terraform apply -auto-approve
       env:
-        AWS_ACCESS_KEY_ID: ${{ASIAYWE3BNF7FBUR3OTD}}
-        AWS_SECRET_ACCESS_KEY: ${{woV6jrvgJ3cyMQknKfXw1OzEf5wwUQ4qLOhCILJ7}}
+  AWS_ACCESS_KEY_ID: ${{ASIAYWE3BNF7FBUR3OTD}}
+  AWS_SECRET_ACCESS_KEY: ${{woV6jrvgJ3cyMQknKfXw1OzEf5wwUQ4qLOhCILJ7}}
